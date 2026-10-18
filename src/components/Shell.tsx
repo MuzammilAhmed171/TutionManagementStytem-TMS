@@ -260,13 +260,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-3 px-5 py-4 border-b border-ink-800">
-              <TutorAvatar size={38} photo={state.settings.tutorPhoto} />
-              <div className="min-w-0">
-                <div className="text-[13px] font-bold text-white truncate">{state.settings.tutorName}</div>
-                <div className="text-[10.5px] text-ink-400">Owner · Tutor</div>
-              </div>
-            </div>
             <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-1 scroll-thin">
               {NAV.map((n) => {
                 const active = route.page === n.key || (n.key === "students" && route.page === "student");
