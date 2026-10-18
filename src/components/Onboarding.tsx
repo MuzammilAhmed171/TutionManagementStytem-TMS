@@ -46,7 +46,7 @@ export default function Onboarding({ onFinish }: { onFinish: () => void }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-ledger text-ink-950 flex flex-col justify-between px-6 pt-[calc(max(env(safe-area-inset-top,0px),8px)+12px)] pb-[calc(max(env(safe-area-inset-bottom,0px),8px)+16px)] select-none overflow-hidden">
+    <div className="fixed inset-0 bg-ledger text-ink-950 flex flex-col px-6 pt-[calc(max(env(safe-area-inset-top,0px),8px)+12px)] pb-4 select-none overflow-hidden">
       {/* top navbar with logo & skip button */}
       <div className="flex items-center justify-between w-full max-w-5xl mx-auto z-10">
         <div className="flex items-center gap-2.5">
@@ -62,10 +62,10 @@ export default function Onboarding({ onFinish }: { onFinish: () => void }) {
       </div>
 
       {/* main full-screen light card area */}
-      <div className="w-full max-w-5xl mx-auto flex-1 flex flex-col justify-center py-12 sm:py-20">
+      <div className="w-full max-w-5xl mx-auto flex-1 flex flex-col justify-center py-4 sm:py-6">
         <div
           key={idx}
-          className="w-full min-h-[60vh] rounded-3xl bg-white border border-ink-150 p-7 sm:p-10 lg:p-16 flex flex-col items-center text-center shadow-[0_12px_40px_rgba(14,24,48,0.08)] anim-pop"
+          className="w-full min-h-[45vh] rounded-3xl bg-white border border-ink-150 p-7 sm:p-10 lg:p-16 flex flex-col items-center text-center shadow-[0_12px_40px_rgba(14,24,48,0.08)] anim-pop"
         >
           {/* big icon */}
           <div className={`w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-3xl ${card.iconBg} flex items-center justify-center shadow-lg mb-6 sm:mb-8 lg:mb-10 ring-4 ring-ink-50`}>
@@ -86,7 +86,7 @@ export default function Onboarding({ onFinish }: { onFinish: () => void }) {
         </div>
 
         {/* page progress indicators */}
-        <div className="flex items-center justify-center gap-2.5 mt-8">
+        <div className="flex items-center justify-center gap-2.5 mt-4">
           {CARDS.map((_, i) => (
             <button
               key={i}
