@@ -48,7 +48,7 @@ export default function Onboarding({ onFinish }: { onFinish: () => void }) {
   return (
     <div className="fixed inset-0 bg-ledger text-ink-950 flex flex-col justify-between px-6 pt-[calc(max(env(safe-area-inset-top,0px),8px)+12px)] pb-[calc(max(env(safe-area-inset-bottom,0px),8px)+16px)] select-none overflow-hidden">
       {/* top navbar with logo & skip button */}
-      <div className="flex items-center justify-between w-full max-w-lg mx-auto z-10">
+      <div className="flex items-center justify-between w-full max-w-5xl mx-auto z-10">
         <div className="flex items-center gap-2.5">
           <AppLogo size={32} />
           <span className="font-display font-bold text-[17px] text-ink-900 tracking-tight">Tuition Desk</span>
@@ -62,25 +62,25 @@ export default function Onboarding({ onFinish }: { onFinish: () => void }) {
       </div>
 
       {/* main full-screen light card area */}
-      <div className="w-full max-w-lg mx-auto flex-1 flex flex-col justify-center py-12 sm:py-20">
+      <div className="w-full max-w-5xl mx-auto flex-1 flex flex-col justify-center py-12 sm:py-20">
         <div
           key={idx}
-          className="w-full min-h-[60vh] rounded-3xl bg-white border border-ink-150 p-7 sm:p-10 flex flex-col items-center text-center shadow-[0_12px_40px_rgba(14,24,48,0.08)] anim-pop"
+          className="w-full min-h-[60vh] rounded-3xl bg-white border border-ink-150 p-7 sm:p-10 lg:p-16 flex flex-col items-center text-center shadow-[0_12px_40px_rgba(14,24,48,0.08)] anim-pop"
         >
           {/* big icon */}
-          <div className={`w-24 h-24 sm:w-28 sm:h-28 rounded-3xl ${card.iconBg} flex items-center justify-center shadow-lg mb-6 sm:mb-8 ring-4 ring-ink-50`}>
+          <div className={`w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-3xl ${card.iconBg} flex items-center justify-center shadow-lg mb-6 sm:mb-8 lg:mb-10 ring-4 ring-ink-50`}>
             <Icon name={card.icon} size={48} strokeWidth={2.1} />
           </div>
 
-          <span className={`inline-block text-[11px] sm:text-[12px] font-extrabold uppercase tracking-[0.15em] ${card.badgeColor} border rounded-full px-4 py-1.5 mb-4 shadow-sm`}>
+          <span className={`inline-block text-[11px] sm:text-[12px] lg:text-[13px] font-extrabold uppercase tracking-[0.15em] ${card.badgeColor} border rounded-full px-4 py-1.5 mb-4 shadow-sm`}>
             {card.badge}
           </span>
 
-          <h2 className="font-display font-extrabold text-[28px] sm:text-[34px] leading-[1.12] text-ink-950 tracking-tight">
+          <h2 className="font-display font-extrabold text-[28px] sm:text-[34px] lg:text-[42px] leading-[1.12] text-ink-950 tracking-tight">
             {card.title}
           </h2>
 
-          <p className="text-[14.5px] sm:text-[16px] text-ink-600 leading-relaxed mt-4 max-w-md font-normal">
+          <p className="text-[14.5px] sm:text-[16px] lg:text-[18px] text-ink-600 leading-relaxed mt-4 max-w-2xl font-normal">
             {card.description}
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function Onboarding({ onFinish }: { onFinish: () => void }) {
       </div>
 
       {/* bottom navigation buttons */}
-      <div className="w-full max-w-lg mx-auto z-10">
+      <div className="w-full max-w-5xl mx-auto z-10">
         <div className="flex items-center gap-3 w-full [&>*]:flex-1">
           {idx > 0 && (
             <button

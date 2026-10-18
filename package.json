@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "typecheck": "tsc --noEmit",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "deploy:full": "npm run build && npm run deploy && git add . && git commit -m \"Auto-deploy: Update production build\" && git push origin main"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.0",
